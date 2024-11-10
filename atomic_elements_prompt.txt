@@ -1,0 +1,63 @@
+<start>
+>>> OBJECTIVE <<<
+This prompt aims to construct an exhaustive list of atomic actions that will get the user to their desired outcome (provided by the user).
+---
+>>> INPUT <<<
+Before beginning the generation phases, we define the ideal completed summary of the user's desired outcome (~300 words)  
+This acts as the [goal state] for our analysis and is provided below:  
+[Here, insert the complete, polished narrative summary from the user on what their desired outcome is from the model - formatted like an abstract/short introduction to a scientific paper]
+Label this section: [BEGIN - TARGET NARRATIVE SUMMARY] ... [END TARGET NARRATIVE SUMMARY]
+---
+>>> GENERATION PHASES <<<
+This component of the prompt will perform two prompting strategies sequentially: Graph of Thought (GOT) and Recursive Chain-of-Thought (rCoT). Both aim to generate the narrative structure step-by-step, but from different angles.
+-
+## Graph of Thought (GOT) - Backward Reasoning
+Prompt:'''
+Using a Graph of Thought (GOT) approach, starting with the provided *[TARGET NARRATIVE SUMMARY]*, work backward to decompose it into essential subgoals required to achieve this outcome. Construct a graph where: 
+- Nodes represent these subgoals (key narrative elements).
+- Edges show dependencies between them, illustrating the logical order needed to build the complete story.
+Focus on revealing the [means] to reach the final narrative structure.
+'''
+-
+## Chain-of-Thought (rCoT) - Recursive Forward Reasoning
+Prompt:'''
+Employ a rCoT method, starting with the first [means] generated in the graph from the GOT approach.
+1. Level 0 (Root Prompt): Set the stage using focusing on the overall narrative goal as a high-level subproblem.
+2. Recursive Breakdown: At each subsequent level, generate a new CoT prompt that addresses a sub-problem derived directly from the previous level's output. This recursive process continues until you reach steps representing single, atomic actions.
+Each rCoT prompt should result in an output readily integrable into a sentence or paragraph of the final narrative.
+3. Stopping Condition: The recursion stops when prompts deal with granular tasks that are essentially single logical steps.
+'''
+---
+>>> EXAMPLE <<<
+## Problem Statement (P) and Hierarchical Structure (H)
+## Problem Statement (P): A compelling scientific narrative detailing the discovery, characterization, validation, impact, and future directions of a novel enzyme capable of efficiently breaking down plastic waste into biodegradable compounds.
+## Hierarchical Structure (H):
+- Level 1: Foundation & Eureka Moment (Introduce the problem, research context, and discovery)
+         - a) Global plastic pollution crisis and need for solutions
+         - b) Enzyme isolation and initial hypothesis validation
+- Level 2: Characterization & Validation (Properties, experiments)
+         - a) In-depth enzyme analysis (efficiency, substrate specificity, stability)
+         - b) Experimental validation of degradation capabilities on various plastics.
+-(Subsequent Levels 3 onward): Further breakdown as per the rCoT process described above.
+---
+>>> INSTRUCTIONS <<<
+1. Perform GOT (backward insight) to obtain graph structure [nodes, edges] and the [means] by which this brings the problem-solving process closer to the goal.
+2. Use rCOT (recursive structure) on the [means] that serve to link the plan described in graph structure [nodes,edges].
+3. Producing an exhaustive list of tasks, sub-tasks, sub-tasks of sub-tasks, etc in (H) that detail how (P) can be achieved. These are the [STEPS].
+---
+>>> FINAL OUTPUT <<<
+A step-by-step plan to get from problem to solution in bullet-point format.
+Each step is specific and precise - representing an atomic thought or action. It cannot be decomposed further. 
+---
+>>> FORMATTING <<<
+## CHAT FORMAT
+ASSISTANT: What would you like step-by-step instructions for?
+USER: The end-state of my desired outcome is …
+---
+'''
+User Input: {{input}}
+Input:      [GOAL STATE]
+Plan:       [STEPS]
+'''
+---
+<end> 

@@ -1,0 +1,128 @@
+```xml
+>>>START<<<
+<objective>
+You are tasked with implementing the Graph of Thought prompting technique to explore a user's query or problem. 
+Your goal is to create a comprehensive overview of the query by representing the central concept and other key sub-concepts as nodes, and the relationships between them as edges. 
+You will then analyze this graph to gain deeper insights.
+</objective>
+###\n\n###
+Here is the user's query:
+<user_query>
+{{USER_QUERY}}
+</user_query>
+###\n\n###
+You are to determine the central concept for this Graph of Thought from the <user_query>.
+<central_concept>
+[A 10-15 word sentence that clearly and concisely states the central concept of the user's query for graph analysis]
+</central_concept>
+###\n\n###
+<task_instructions>
+Follow these steps to create and analyze your Graph of Thought:
+1. Initial Nodes: Generate 5-7 key ideas, factors, or sub-concepts directly related to the central concept.
+2. Node Expansion: For each initial node:
+   a. Describe its relevance to the central concept
+   b. Identify 2-3 sub-ideas, factors, or implications
+   c. Consider possible challenges or opposing views
+3. Edge Identification: Establish connections between nodes:
+   a. Draw lines between related nodes
+   b. Label connections (e.g., "influences," "enhances," "contradicts")
+   c. Classify connection strength as strong, moderate, or weak
+4. Cluster Analysis: Identify clusters of closely related nodes:
+   a. Summarize the common theme for each cluster
+   b. Explain how each cluster connects to other parts of the graph
+5. Bridge Concepts: Identify nodes that connect different clusters and explain their significance.
+6. Feedback Loops: Look for circular relationships and describe their influence on the central concept.
+7. External Influences: Introduce and connect external factors that might impact your graph.
+8. Temporal Dynamics: Consider how relationships or node importance might change over time.
+9. Emergent Patterns: Identify and describe any unexpected relationships or insights that emerge from the overall graph.
+10. Graph Refinement: Review and refine your graph by merging similar nodes, splitting complex ones, and adjusting edge strengths.
+11. Alternative Perspectives: Consider how different stakeholders might view or modify the graph.
+12. Solution Pathways: If addressing a specific problem, identify potential solution nodes and trace pathways to the central concept.
+13. Knowledge Gaps: Highlight areas where you lack information or certainty.
+14. Synthesis: Summarize key insights, influential nodes, and how your understanding of the central concept has evolved.
+15. Action Steps: Derive and prioritize concrete actions or next steps based on your graph insights.
+16. Reflection: Reflect on the process, unexpected connections, visualization benefits, and any limitations or biases in your graph.
+</task_instructions>
+###\n\n###
+<output>
+Present your analysis in the following format:
+<graph_of_thought>
+"""---------GRAPH-of-THOUGHT---------"""\n\n
+###\n\n###
+<initial_nodes>
+[List your initial nodes here]
+</initial_nodes>
+###\n\n###
+<node_expansion>
+[For each node, provide relevance, sub-ideas, and counterarguments]
+</node_expansion>
+###\n\n###
+<edge_identification>
+[Describe connections between nodes, including labels and strengths]
+</edge_identification>
+###\n\n###
+<diagram>
+[Generate a markdown diagram of the nodes and edges, including labels and strengths]
+</diagram>
+###\n\n###
+<cluster_analysis>
+[Identify and describe clusters]
+</cluster_analysis>
+###\n\n###
+<bridge_concepts>
+[Identify and explain bridge nodes]
+</bridge_concepts>
+###\n\n###
+<feedback_loops>
+[Describe any feedback loops found]
+</feedback_loops>
+###\n\n###
+<external_influences>
+[List and explain external factors]
+</external_influences>
+###\n\n###
+<temporal_dynamics>
+[Describe how relationships might change over time]
+</temporal_dynamics>
+###\n\n###
+<emergent_patterns>
+[Explain unexpected insights or relationships]
+</emergent_patterns>
+###\n\n###
+<graph_refinement>
+[Describe any refinements made to the graph]
+</graph_refinement>
+###\n\n###
+<alternative_perspectives>
+[Consider different stakeholder viewpoints]
+</alternative_perspectives>
+###\n\n###
+<solution_pathways>
+[If applicable, describe potential solutions and their pathways]
+</solution_pathways>
+###\n\n###
+<knowledge_gaps>
+[Highlight areas of uncertainty or missing information]
+</knowledge_gaps>
+###\n\n###
+<synthesis>
+[Summarize key insights and how your understanding has evolved]
+</synthesis>
+###\n\n###
+<action_steps>
+[List prioritized actions or next steps]
+</action_steps>
+###\n\n###
+<reflection>
+[Reflect on the process, benefits, and limitations]
+</reflection>
+###
+</graph_of_thought>
+</output>
+###
+<final_reminder>
+Ensure that your analysis is thorough, insightful, and follows the structure outlined above. 
+Your goal is to provide a comprehensive exploration of the central concept using a process rooted in graph theory.
+</final_reminder>
+>>>END<<<
+```

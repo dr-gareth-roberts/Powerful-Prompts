@@ -1,0 +1,204 @@
+<Example 1>
+<Background>
+There are three blocks called A, B, and C.
+---
+In block A, there is a small blue square far above a small blue circle.
+There is a small black triangle far to the right of both small blue objects.
+The black triangle is near and above a medium blue square.
+The medium blue square is touching the right edge of A and is near and above a medium black circle.
+Near and to the right of the medium black circle is a medium yellow triangle.
+The yellow triangle is to the left of the small blue circle.
+---
+In B, which is to the right of A, there is a large blue square near and to the left of a large yellow triangle.
+There is also a small yellow triangle far below the square.
+---
+In C, which is to the right of B. There is a small yellow circle near and above a small yellow triangle.
+The small yellow triangle is touching the top of a medium black triangle.
+The black triangle is touching the right edge of C.
+There is a large blue circle far below the black triangle.
+</Background>
+---
+<Question>Are all yellow objects in C above a blue thing?</Question>
+---
+<Candidate Answers>["Yes", "NO", "Do not Know"]</Candidate Answers>
+---
+<Answer>
+Let’s analyze the information provided step by step to determine if all yellow objects in Block C are above a blue thing:
+<step-by-step-reasoning>
+    1. C: (small, yellow, circle) ↑ (small, yellow, triangle)
+    2. (small, yellow, triangle) = top of (medium, black, triangle)
+    3. (large, blue, circle) ∞↓ (medium, black, triangle)
+ Based on the provided information, C: (small, yellow, circle) ↑ (large, blue, circle) and (small, yellow, triangle) ↑ (large, blue, circle).
+
+So, the correct answer is: "Yes".
+</step-by-step-reasoning>
+</Answer>
+</Example 1>
+==========================
+%$$$###/n/n---/n/n/###$$$%
+==========================
+<Example 2>
+<Background>
+There are three blocks called A, B, and C.
+---
+A is to the left of B and B is to the left of C.
+---
+In A, there is a small black triangle near and to the left of a large blue circle.
+The large blue circle is near and to the left of a small blue circle.
+The small blue square is far below a medium yellow square.
+---
+In B, there is a small yellow circle.
+---
+In C, there is a medium black triangle that is near and to the left of a small yellow circle.
+The small yellow circle is near and to the left of a blue triangle.
+There is a large yellow square touching the bottom of the small yellow circle.
+Near and below the large yellow square is a large black square.
+</Background>
+---
+<Question>What is the relation between the large black thing and the small yellow thing?</Question>
+---
+<Candidate Answers>["left", "right", "above", "below", "near to", "far from", "touching", "Do Not Know"]</Candidate Answers>
+---
+<Answer>
+Let’s break down the relationships between the objects step by step:
+<step-by-step-reasoning>
+    A: 1. (small, black, triangle) < (large, blue, circle)
+       2. (large, blue, circle) < (small, blue, circle)
+       3. (small, blue, square) ∞↓ (medium, yellow, square)
+    B: 1. (small, yellow, circle) C: 1. (medium, black, triangle) < (small,yellow, circle)
+       2. (small, yellow, circle) < (blue, triangle)
+       3. (large, yellow, square) =↓ (small, yellow, circle)
+       4. (large, black, square) ↓ (large,yellow, square)
+Now, let’s determine the relation between the (large, black, square) and the (small, yellow, circle):
+       1. C: (large, black, square) ↓ (large, yellow, square). Therefore, (large, black, square) ↓ (large, yellow, square)
+       2. C: (small, yellow, circle) < (medium, black, triangle).Therefore, (small, yellow, circle) (medium, black, triangle)
+So, the correct answer: "below" and "near to".
+</step-by-step-reasoning>
+</Example 2>
+==========================
+%$$$###/n/n---/n/n/###$$$%
+==========================
+<Example 3>
+<Background>
+There are three blocks called A, B, and C.
+---
+A is to the right of B and B is to the right of C.
+---
+In A, there is a medium black circle that is far to the right of a medium blue square.
+The medium blue square is near and to the right of a small yellow circle.
+Far above the blue square is a medium yellow triangle.
+Near the medium triangle is a small blue circle.
+---
+In B, there is a large blue square that is touching the right edge of B.
+There is a medium black triangle that is touching the left side of the blue square.
+Near and above the medium black triangle is a large blue circle.
+Near and above the large blue circle is a large yellow triangle.
+---
+In C, there is a small yellow triangle near and to the right of a medium black circle.
+The yellow triangle is touching the right edge of C.
+Far to the left of the medium black circle is a small blue square.
+</Background>
+---
+<Question>What block does not have any objects touching the edge of it?</Question>
+---
+<Candidate Answers>["A", "B", "C"]</Candidate Answers>
+---
+<Answer>
+Let's analyze each block step by step to determine which one does not have any objects touching its edge:
+<step-by-step-reasoning>
+A: 1. (medium, black, circle) ∞> (medium, blue, square)
+      (medium, blue, square) > (small, yellow, circle)
+      (medium, yellow, triangle) ∞↑ (blue, square)
+      (small, blue, circle) ↑ (medium, triangle)
+B: 1. (large, blue, square) => edge of B
+      (medium, black, triangle) =< (blue, square)
+      (large, blue, circle) ↑ (medium, black, triangle)
+      (large, yellow, triangle) ↑ (large, blue, circle)
+C: 1. (small, yellow, triangle) > (medium, black, circle)
+      (yellow, triangle) => edge of C
+      (small, blue, square) ∞< (medium, black, circle)
+Based on the provided information, let's determine which block does not have any objects touching its edge:
+ - Block A has no objects touching its edge.
+ - Block B has the large blue square touching its right edge.
+ - Block C has the yellow triangle touching its right edge.
+So, the correct answer is: "A".
+</step-by-step-reasoning>
+</Answer>
+</Example 3>
+==========================
+%$$$###/n/n---/n/n/###$$$%
+==========================
+<Example 4>
+<Background>
+There are three blocks called A, B, and C.
+A is to the left of B and B is to the left of C.
+In A, there is a large black triangle far above a medium black triangle.
+The medium black triangle is near and above a large yellow circle.
+Near and to the right of the large circle is a small blue circle.
+In B, there is a medium blue circle near and to the left of a small black square.
+Far below the blue circle is a small yellow circle.
+In C, there is a small blue square.
+</Background>
+---
+<Question>What object is near the large yellow thing, the medium black triangle the small blue circle the medium black triangle or the small blue circle?</Question>
+---
+<Candidate Answers>["the medium black triangle", "the small blue circle", "both of them", "none of them"]</Candidate Answers>
+---
+<Answer>
+Let's break down the information step by step to determine which object is near the large yellow circle:
+<step-by-step-reasoning>
+A: 1. (large, black, triangle) ∞↑ (medium, black, triangle)
+      (medium, black, triangle) ↑ (large, yellow, circle)
+      (small, blue, circle) > (large, circle)
+B: 1. (medium, blue, circle) < (small, black, square)
+      (small, yellow, circle) ∞↓ (blue, circle)
+C: 1. there is a small blue square
+---
+Now, let's analyze the position of the (large, yellow, circle):
+    1. A: (large, yellow, circle) ↓ (medium, black, triangle)
+       A: (small, blue, circle) > (large, yellow, circle)
+---
+Based on the provided information:
+    A: (medium, black, triangle) ↑ (large, yellow, circle)
+    A: (small, blue, circle) > (large, yellow, circle)
+---
+    So, the correct answer is: "both of them".
+</step-by-step-reasoning>
+</Answer>
+</Example 4>
+==========================
+%$$$###/n/n---/n/n/###$$$%
+==========================
+<Example 5>
+<Background>
+There are three blue shapes in a block that we call A.
+Two medium blue squares are below a big blue square.
+The first medium blue square is to the left of the other medium one which is touching the bottom edge of block A.
+There is another block below block A we call it B.
+A big blue triangle is touching the top edge of this block which is above a small black triangle, a big blue circle and a medium blue triangle.
+The medium triangle is touching the bottom edge of the block.
+The circle is below and to the left of the small triangle.
+It is above the medium triangle.
+</Background>
+---
+<Question>Is the small triangle below the medium triangle?</Question>
+---
+<Candidate Answers>["Yes", "NO", "Do not Know"]</Candidate Answers>
+---
+<Answer>
+Let's analyze the arrangement of objects in block B to determine if the small triangle is below the medium triangle:
+<step-by-step-reasoning>
+B: 1. (big, blue, triangle) = top edge of B
+      (big, blue, triangle) ↑ (small, black, triangle), (big, blue, circle) and (medium, blue, triangle)
+      (big, blue, circle) ↓< (small, black, triangle)
+      (big, blue, circle) ↑ (medium, blue, triangle)
+      (medium, blue, triangle) = bottom edge B
+Based on the provided information:
+- The small black triangle is above the big blue circle
+- The big blue circle is above the medium blue triangle
+Therefore, the small black triangle is above the medium blue triangle
+So, the correct answer is: "NO".
+</step-by-step-reasoning>
+</Answer>
+</Example 5>
+==========================

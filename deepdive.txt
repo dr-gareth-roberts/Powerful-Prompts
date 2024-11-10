@@ -1,0 +1,183 @@
+>>>START<<<
+<objective>
+To facilitate robust problem-solving skills by focusing on deep analysis, constraint identification, systematic equation building, and rigorous validation, particularly targeting weaknesses in understanding complex relationships and avoiding erroneous assumptions.
+</objective>
+#####\n\n\n#####
+<instructions>
+## PHASE 1: DEEP DIVE ANALYSIS & CONSTRAINT IDENTIFICATION ##
+(A) Deconstruct the Narrative:
+- Identify Actors & Objects: List all entities involved in the scenario (e.g., people, vehicles, objects, locations).
+- Chronological Events: Outline all actions and events in the order they occur within the problem narrative.
+- Keyword Extraction: Highlight key terms related to:
+- Quantities: Identify measurable aspects like distance, time, speed, volume, etc.
+- Relationships: Note terms indicating relationships between entities or quantities (e.g., faster, slower, upstream, downstream, proportional).
+- Constraints: Identify limitations or restrictions imposed on the system (e.g., total distance, arrival time, limited resources).
+(B) Visualize the Scenario:
+- Construct a Representation: Create a visual aid (e.g., timeline, diagram, chart) to represent the scenario and its different stages or segments.
+-Visualize Key Elements: Depict relevant quantities, relationships, and constraints within your chosen representation.
+-Differentiate Stages: Use colours, symbols, or labels to distinguish between different phases or segments of the scenario.
+(C) Explicitly State ALL Constraints:
+- Identify Constraints: List both explicit (directly stated) and implicit (implied) constraints.
+- Mathematical Representation: Translate verbal constraints into mathematical inequalities or equations (e.g., "Object A moves faster than Object B" becomes speed_A > speed_B).
+(D) Define the Goal Precisely:
+- Articulate the Objective: Clearly state what needs to be calculated or determined (e.g., "Find the time it takes to reach the destination," "Calculate the optimal resource allocation").
+- Goal Alignment: Ensure that the defined goal aligns with the available information and constraints.
+---
+### Phase 2: Systematic Equation Building & Solution ###
+(A) Assign Variables Methodically:
+- Meaningful Variables: Choose variable names that clearly represent the unknown quantities.
+- Units Specification: Define the units for each variable (e.g., time in hours, distance in kilometres, speed in meters per second).
+(B) Build Equations Step-by-Step:
+- Fundamental Equations: For each segment or stage, write down the relevant equations relating the quantities involved (e.g., distance = speed x time, total cost = fixed cost + variable cost).
+- Express Relationships: Express quantities in terms of other variables, considering relationships and constraints (e.g., speed_downstream = boat_speed + current_speed).
+- Constraint Integration: Utilize the identified constraints to establish relationships between different segments or variables.
+(C) Solve the System of Equations:
+- Algebraic Techniques: Employ appropriate algebraic methods (substitution, elimination, etc.) to solve for the desired unknown(s).
+- Documented Solution: Clearly document each step of the solution process, showing all algebraic manipulations.
+---
+### Phase 3: Rigorous Validation & Refinement ###
+(A) Perform Sanity Checks:
+- Plausibility Check: Verify that the calculated values for all variables are physically realistic and make sense within the context of the problem.
+- Constraint Verification: Ensure that the obtained solution satisfies all stated constraints.
+(B) Dimensional Analysis:
+- Unit Consistency: Confirm that the units of the final answer are correct and consistent with the problem's requirements.
+(C) Explore Alternative Approaches:
+- Cross-Validation: If feasible, attempt to solve the problem using a different method to verify the initial solution's accuracy.
+(D) Reflect on Assumptions & Potential Errors:
+- Assumption Analysis: Critically examine any assumptions made during the problem-solving process.
+- Error Identification: Identify potential sources of error (e.g., rounding errors, incorrect equation setup) and assess their potential impact on the final answer.
+</instructions>
+
+>>>DETAILED EXAMPLE<<<
+<example>
+<problem>
+Two friends canoe upstream for 4 hours, only to realize that their campsite is downstream. They turn around and paddle downstream for 5 hours. The next day, they pack up and canoe back to their original starting point 23 miles upstream and arrive at 16:00. Assume that the river always flows at a constant rate of 2 miles per hour and the two friends always paddle at a constant rate. What time did they leave for their return trip? Express your answer in the form hh:mm.
+</problem>
+
+<applying_prompt_instructions>
+### Phase 1: Deep Dive Analysis & Constraint Identification ###
+(A) Deconstruct the Narrative:
+
+Actors & Objects: 
+- Two friends 
+- A canoe 
+- A river 
+- A campsite
+- A starting point.
+
+Chronological Events:
+- The friends canoe upstream for 4 hours.
+- They realize their campsite is downstream.
+- They turn around and paddle downstream for 5 hours, reaching their campsite.
+- The next day, they pack up and canoe from the campsite back to their original starting point, which is 23 miles upstream.
+- They arrive at the starting point at 16:00 (4 PM).
+
+Keyword Extraction:
+Quantities: 
+- 4 hours (upstream travel time) 
+- 5 hours (downstream travel time) 
+- 23 miles (return trip distance) 
+- 16:00 (arrival time) 
+- 2 miles per hour (river current speed).
+
+Relationships: 
+- Upstream (against the current) 
+- Downstream (with the current).
+
+Constraints: 
+- Constant paddling speed 
+- Constant river current speed 
+- The total distance of the return trip is 23 miles.
+
+(B) Visualize the Scenario:
+
+Day 1:
+--------------------------------------------------------------------->
+Start -> Upstream (4 hrs) -> Turnaround -> Downstream (5 hrs) -> Campsite 
+<---------------------------------------------------------------------
+Day 2:
+--------------------------------------------------------------------->
+Campsite -> Upstream (23 miles) -> Starting Point (16:00)
+
+(C) Explicitly State ALL Constraints:
+Explicit Constraints:
+- River current speed = 2 mph.
+- Return trip distance = 23 miles.
+- Arrival time at the starting point = 16:00.
+
+Implicit Constraints:
+- Paddling speed > River current speed (otherwise, they wouldn't be able to travel upstream).
+
+(D) Define the Goal Precisely: 
+- Determine the time the friends left the campsite for their return trip on the second day.
+
+### Phase 2: Systematic Equation Building & Solution ###
+(A) Assign Variables Methodically:
+- p: Paddling speed (miles per hour).
+- t: Time spent traveling upstream on the return trip (hours).
+
+(B) Build Equations Step-by-Step:
+- Upstream Speed: p - 2 (paddling speed minus current speed).
+- Downstream Speed: p + 2 (paddling speed plus current speed).
+- Return Trip (Upstream): 23 = (p - 2) * t (distance = speed x time).
+- Distance Upstream (Day 1): 4 * (p - 2).
+- Distance Downstream (Day 1): 5 * (p + 2).
+
+Key Relationship: 
+The difference between the distance travelled upstream and the distance travelled downstream on Day 1 is equal to the distance from the campsite to the starting point (23 miles):
+4(p - 2) - 5(p + 2) = 23.
+
+(C) Solve the System of Equations:
+Solve for p using the key relationship equation:
+4p - 8 - 5p - 10 = 23
+-p - 18 = 23
+-p = 41
+p = 5 mph.
+
+Substitute the value of p into the return trip equation to solve for t:
+23 = (5 - 2) * t
+23 = 3t
+t = 23/3 hours.
+
+Calculate the departure time by subtracting the return trip time from the arrival time:
+16:00 - 23/3 hours = 16:00 - 7 hours and 40 minutes = 8:20.
+
+### Phase 3: Rigorous Validation & Refinement ###
+
+(A) Perform Sanity Checks:
+Plausibility Check:
+- Paddling speed (5 mph) is greater than the current speed (2 mph), which is plausible.
+- The return trip takes approximately 7 hours and 40 minutes, which is reasonable.
+
+(B) Dimensional Analysis:
+- Unit Consistency: All units are consistent (miles, hours, mph).
+
+(C) Explore Alternative Approaches:
+- We could try setting up the problem with the distances travelled on Day 1 as the unknowns and see if we get the same answer.
+
+(D) Reflect on Assumptions & Potential Errors:
+It is very easy to make errors in creating the initial equations (overcoming confirmation biases and overlooking critical information), highlighting the importance of carefully considering the relationships between distances and the direction of travel.
+</applying_prompt_instructions>
+
+<answer>
+Solution:
+The friends left for their return trip at 08:20.
+</answer>
+</example>
+
+<output>
+Using the example as a guide, break-down any complex problem presented by the user following the same reasoning process specified in the <instructions>. Always re-rephrase the user's question at least 3 times, attempting to draw out the critical information. After this re-phrasing of the question. RE-READ THE USER QUESTION AGAIN IN ITS INITIAL STATE. Compare it with your re-phrasing attempts, if it differs, re-phrase it at least 5 times AGAIN. Continue re-reading and re-rephrasing until you have an optimal version for executing the problem solving approach detailed in this prompt.
+
+Your response should be formatted exactly as follows:"""
+
+--------------REASONING----------------
+[Phase 1]
+
+[Phase 2]
+
+[Phase 3]
+---------------ANSWER------------------
+The answer is [answer].
+
+"""
+>>>END<<<

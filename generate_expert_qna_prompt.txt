@@ -1,0 +1,64 @@
+def generate_expert_qna_prompt(text):
+    prompt = f"""
+    You are a world-renowned expert in analytical reasoning, information extraction, and educational content creation. Your task is to generate a series of insightful questions and provide comprehensive answers based on the given text. Your expertise allows you to identify key concepts, draw subtle inferences, and create questions that promote deep understanding of the material.
+
+    Text for analysis: "{text}"
+
+    Follow this comprehensive question generation and answering process:
+
+    Stage 1: Text Analysis
+    1. Carefully read and analyse the entire text, identifying main ideas, key concepts, and supporting details.
+    2. Note any important facts, figures, relationships, or trends presented in the text.
+    3. Identify any assumptions, biases, or limitations in the given information.
+
+    Stage 2: Question Formulation
+    1. Generate 5-8 questions that cover the main points and important details of the text.
+    2. Ensure questions are diverse, including factual, inferential, and evaluative types.
+    3. Craft questions that require 3-5 sentence answers for comprehensive coverage.
+    4. Phrase questions clearly and concisely (1-2 sentences each).
+
+    Stage 3: Answer Development
+    1. For each question, construct a clear, concise, and comprehensive answer (3-5 sentences).
+    2. Include relevant evidence or examples from the text to support your answers.
+    3. Make justified inferences where necessary, clearly labelling these as such.
+    4. Ensure answers are self-contained and can be understood without referring back to the original text.
+
+    Stage 4: Accuracy and Coherence Check
+    1. Cross-reference your questions and answers with the original text to ensure factual accuracy.
+    2. Verify that the set of questions and answers collectively cover the main points of the text.
+    3. Ensure a logical flow in the sequence of questions and answers.
+
+    Stage 5: Educational Value Enhancement
+    1. Refine questions and answers to maximize their educational value.
+    2. Ensure questions promote critical thinking and deep understanding of the material.
+    3. Adjust the complexity of questions and answers to be appropriate for an advanced high school or undergraduate level.
+
+    Stage 6: Self-Criticism and Refinement
+    1. Critically evaluate your questions and answers. What aspects might be missing or underdeveloped?
+    2. Consider potential misunderstandings or alternative interpretations of the text.
+    3. Refine the questions and answers based on this critical review.
+
+    Output Format:
+    Q1: [Your first question (1-2 sentences)]
+    A1: [Your comprehensive answer to the first question (3-5 sentences)]
+
+    Q2: [Your second question (1-2 sentences)]
+    A2: [Your comprehensive answer to the second question (3-5 sentences)]
+
+    [Continue with Q3/A3, Q4/A4, etc., until all questions are addressed]
+
+    Meta-Analysis: [Brief reflection on the question generation and answering process for this specific text, including any challenges or notable aspects]
+
+    Your questions and answers must be of the highest possible quality, demonstrating exceptional analytical skills, comprehensive understanding, and the ability to promote deep learning about the text's content.
+    """
+    return prompt
+
+def run_expert_qna(text):
+    prompt = generate_expert_qna_prompt(text)
+    # Simulating expert model response
+    response = simulate_expert_qna_response(prompt)
+    return response
+
+def simulate_expert_qna_response(prompt):
+    # Simulating an expert-level, highly confident model response for question generation and answering
+    return "Simulated expert question generation and answering response based on the advanced prompt"

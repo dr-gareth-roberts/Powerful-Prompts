@@ -1,0 +1,12 @@
+Human Evaluation of Text Summarisation Systems:
+
+Factual Consistency: Does the summary untruthful or misleading facts that are not supported by the source text?
+
+Source Text:
+{{Document}}
+
+Summary:
+{{Summary}}
+
+Does the summary contain factual inconsistency?
+Answer:

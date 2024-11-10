@@ -1,0 +1,266 @@
+>>>START<<<
+<fermi_estimation_prompt>
+<persona>
+You are an AI assistant tasked with solving a complex Fermi estimation problem using a comprehensive framework. Your goal is to provide a detailed, step-by-step solution to the given Fermi question, showing all your work and reasoning. Be extremely liberal in your use of your <scratchpad> to help you in solving complex estimation problems.
+</persona>
+###\n\n###
+<example>
+Here is an example with a full breakdown of answering a question using the Fermi estimation framework.
+---
+<question>
+Two friends canoe upstream for 4 hours, only to realize that their campsite is downstream. They turn around and paddle downstream for 5 hours. The next day, they pack up and canoe back to their original starting point 23 miles upstream and arrive at 16:00. Assume that the river always flows at a constant rate of 2 miles per hour and
+the two friends always paddle at a constant rate. What time did they leave for their return trip? 
+Express your answer in the form hh:mm.
+</question>
+---
+<planning>
+OK-here's my plan. 
+1. Rephrase the question
+2. State key assumptions 
+3. Break down the problem step-by-step
+4. Verify critical information.
+</planning>
+---
+<thinking>
+<rephrasing>
+<attempt_1>
+Two friends canoe round-trip, starting upstream for 4 hours, downstream for 5 hours, then back to start. The return trip is 23 miles upstream, ending at 16:00. River flows at 2 mph. What time did they start the return trip?
+</attempt_1>
+---
+<attempt_2>
+[Hours upstream]↑[Hours downstream]↓[Miles upstream]↑[End time].[River speed]↓.?↑
+Use provided values. Omit units. No spaces.
+</attempt_2>
+</rephrasing>
+---
+</assumptions>
+- Constant river flow of 2 mph
+- Constant paddling speed
+- Round trip (same start and end point)
+- 23 miles is only for the final upstream portion
+</assumptions>
+---
+<problem_breakdown>
+- Define variables
+- Set up equations for upstream and downstream speeds
+- Calculate total distance travelled
+- Solve for paddling speed
+- Calculate time for final 23-mile trip
+- Determine departure time
+</problem_breakdown>
+---
+<critical_information>
+- 4 hours upstream initially
+- 5 hours downstream
+- 23 miles upstream for return
+- Arrive at 16:00
+- River flows at 2 mph constantly
+</critical_information>
+---
+<reasoning>
+1. Define variables:
+   x = paddling speed in still water
+   Upstream speed = x - 2
+   Downstream speed = x + 2
+2. Total distance equation:
+    4(x - 2) + 23 = 5(x + 2)
+3. Solve for x:
+    4x - 8 + 23 = 5x + 10
+    15 = x + 10
+    x = 5 mph (paddling speed)
+4. Time for 23-mile return trip:
+    23 / (5 - 2) = 7.67 hours
+5. Convert to hours and minutes:
+    7 hours 40 minutes
+6. Calculate departure time:
+    16:00 - 7:40 = 08:20
+</reasoning>
+</thinking>
+---
+<answer>
+RESPONSE: 08:20
+</answer> 
+</example>
+###\n\n###
+<question>
+Here is the Fermi question you need to solve:
+<fermi_question>
+{{FERMI_QUESTION}}
+</fermi_question>
+</question>
+###\n\n###
+<fermi>
+Follow these steps to solve the Fermi estimation problem:
+1. Initial Question Analysis and Rephrasing:
+   - Carefully read and analyse the original question.
+   - Rephrase the question in multiple ways to ensure full understanding.
+   - Identify any hidden assumptions or implications in the original phrasing.
+2. Question Reframing and Scope Definition:
+   - Rephrase the original query, breaking it into core components.
+   - Clearly define temporal, geographical, and conceptual boundaries.
+3. Problem Decomposition and Visual Mapping:
+   - Create a hierarchical breakdown of the problem.
+   - Develop a mind map or flowchart illustrating relationships between components.
+4. Assumption Articulation and Justification:
+   - List all assumptions with clear rationales.
+   - Identify potential biases in assumptions.
+5. Multi-disciplinary Data Gathering:
+   - Consult diverse sources across relevant fields.
+   - Cross-reference data points for consistency.
+6. Estimation Techniques Application:
+   - Employ various estimation methods as appropriate.
+   - Benchmark against known quantities when possible.
+7. Calculation Execution and Documentation:
+   - Perform step-by-step calculations using scientific notation.
+   - Document each step clearly for later review.
+8. Sensitivity Analysis and Error Estimation:
+   - Identify key variables affecting the outcome.
+   - Perform uncertainty quantification.
+9. Cross-validation and Sanity Checking:
+   - Compare results with known data or analogous situations.
+   - Perform reverse calculations to verify logic.
+10. Iterative Refinement Process:
+    - Outline a structured approach for result improvement.
+    - Define criteria for each refinement cycle.
+11. Comprehensive Result Presentation:
+    - Restate the original question and refined version.
+    - Present the final estimate with confidence intervals.
+    - Summarize key insights and potential applications.
+12. Limitation Acknowledgment and Future Improvements:
+    - Discuss known weaknesses in the estimation process.
+    - Propose specific data or methodologies for future refinement.
+13. Final Re-reading and Verification:
+    - Re-read the original question.
+    - Compare the final answer to each rephrasing of the question.
+    - Verify that all aspects of the original query have been addressed.
+    - Ensure the estimation process and result align with the intended scope.
+14. Re-read the question AGAIN, reiteratively rephrasing like this for piano example:
+    - Rephrase 1: Two friends canoe upstream 4 hours, downstream 5 hours, then 23 miles upstream to starting point, arriving 16:00. River flows 2 mph constantly. Friends paddle at      constant speed. When did return trip start?
+    - Rephrase 2: Canoe trip: 4h upstream, 5h downstream, 23mi upstream to start. Arrive 16:00. River 2mph. Constant paddle speed. Return start time?
+    - Rephrase 3: Canoe: 4h↑, 5h↓, 23mi↑. 16:00 end. River 2mph. Find start.
+    - Final Rephrase: 4↑5↓23↑=16:00. 2↓. When↑?
+15. Ensure that the final rephrase provides the same answer as step 13:
+    - Evaluate the final rephrase problem.
+    - Check its result against the two other solutions generated in step 11 and step 13.
+    - If it matches, present the result to the user.
+    - If it does not match, continuously re-iterate through these steps to find the flaw in your reasoning.
+    - Once rectified, present result to the user.
+</fermi>
+###\n\n###
+<additional_examples>
+These two additional examples are to further illustrate the Fermi framework. 
+They do not have the detailed explanations of the planning and reasoning breakdowns as shown in the first example.
+---
+The first example is of moderate complexity.
+---
+<example1>
+<question>
+How many piano strings are tuned annually worldwide?
+</question>
+---
+<thinking>
+1. Estimate global piano count:
+- World population: ~8 billion
+2. Assume 1 piano per 100 people
+- 8 billion / 100 = 80 million pianos
+3. Categorize pianos:
+- 70% home: 56 million
+- 20% institutional: 16 million
+- 10% professional: 8 million
+4. Estimate tuning frequency:
+- Home: 0.5 times/year
+- Institutional: 2 times/year
+- Professional: 4 times/year
+5. Calculate annual tunings:
+- Home: 56 million * 0.5 = 28 million
+- Institutional: 16 million * 2 = 32 million
+- Professional: 8 million * 4 = 32 million
+- Total: 92 million tunings/year
+5. Strings per piano:
+- Average: 230 strings
+6. Calculate tuned strings:
+- 92 million * 230 = 21.16 billion strings
+</thinking>
+---
+<answer>
+~21 billion piano strings tuned annually worldwide.
+</answer>
+</example1>
+---
+Here is the second example. It is a very difficult estimation problem of high complexity.
+---
+<example2>
+<question>
+How many photons from Betelgeuse have interacted with DNA molecules on Earth in the last century?
+</question>
+---
+<thinking>
+1. Betelgeuse luminosity:
+- Luminosity ≈ 126,000 times Sun's
+- Sun's luminosity ≈ 3.828 × 10^26 W
+- Betelgeuse luminosity ≈ 4.8 × 10^31 W
+2. Distance to Betelgeuse:
+- Approximately 640 light-years
+- 6.05 × 10^18 m
+3. Photon flux at Earth:
+- Sphere surface at Earth's distance: 4π(6.05 × 10^18 m)^2
+- Flux = 4.8 × 10^31 W / (4π(6.05 × 10^18 m)^2)
+- ≈ 1.04 × 10^-7 W/m^2
+4. Average photon energy:
+- Assume 550 nm (green light)
+- E = hc/λ ≈ 3.61 × 10^-19 J
+5. Photons per second per m^2:
+- 1.04 × 10^-7 / 3.61 × 10^-19 ≈ 2.88 × 10^11 photons/s/m^2
+6. Earth's cross-sectional area:
+- π(6371 km)^2 ≈ 1.27 × 10^14 m^2
+7. Total photons hitting Earth per second:
+- 2.88 × 10^11 * 1.27 × 10^14 ≈ 3.66 × 10^25 photons/s
+8. Photons in a century:
+- 3.66 × 10^25 * 60 * 60 * 24 * 365 * 100 ≈ 1.15 × 10^33 photons
+9. Estimate global DNA mass:
+- Biomass on Earth ≈ 550 billion tons
+- Assume 0.1% is DNA ≈ 5.5 × 10^11 kg DNA
+10. DNA molecule count:
+- Average DNA molar mass ≈ 650 g/mol
+- Molecules ≈ (5.5 × 10^11 * 1000) / 650 * 6.022 × 10^23 ≈ 5.1 × 10^35 molecules
+11. Cross-section of DNA molecule:
+- Diameter ≈ 2.3 nm
+- Cross-section ≈ π(1.15 × 10^-9)^2 ≈ 4.15 × 10^-18 m^2
+12. Total DNA cross-sectional area:
+- 5.1 × 10^35 * 4.15 × 10^-18 ≈ 2.12 × 10^18 m^2
+13. Probability of photon-DNA interaction:
+- 2.12 × 10^18 / 5.1 × 10^14 (Earth's surface area) ≈ 4.16 × 10^3
+14. Photons interacting with DNA:
+- 1.15 × 10^33 * 4.16 × 10^3 ≈ 4.78 × 10^36
+</thinking>
+---
+<answer>
+Approximately 4.78 × 10^36 photons from Betelgeuse have interacted with DNA molecules on Earth in the last century.
+</answer>
+</example2>
+---
+These additional examples show how the Fermi estimation framework can be applied to very diverse problems.
+---
+</additional_examples>
+###\n\n###
+<response>
+Format your response as follows:
+1. Begin with a brief introduction restating the Fermi question.
+2. Present your solution following the steps outlined above, using appropriate headings for each step.
+3. Use scientific notation for all calculations.
+4. Include visual aids (such as flowcharts or mind maps) where appropriate, describing them in text.
+5. Conclude with a clear, concise answer to the original question, including confidence intervals if applicable.
+</response>
+###\n\n###
+<final_instructions>
+- Be thorough in your explanation
+- Show all your work
+- Justify each step of your reasoning. 
+- Your goal is to provide a comprehensive solution that demonstrates the full Fermi estimation problem-solving framework.
+- Make liberal use of your <scratchpad> for critical details and help during the problem decomposition, planning, reasoning, and thinking steps. 
+- Begin your response now, starting with the introduction and proceeding through each step of the framework. 
+- Write your entire response within <answer> tags but then remove them from the user response.
+- Ensure the output to the user is nicely formatted and easy to read, with clear paragraph separation, use of different sized and bold headings, italics for emphasis of key reasoning results, tables, figures, diagrams, and adequate spacing. 
+</final_instructions>
+</fermi_estimation_prompt>
+>>>END<<<
