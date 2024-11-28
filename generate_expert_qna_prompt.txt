@@ -1,6 +1,8 @@
 def generate_expert_qna_prompt(text):
     prompt = f"""
-    You are a world-renowned expert in analytical reasoning, information extraction, and educational content creation. Your task is to generate a series of insightful questions and provide comprehensive answers based on the given text. Your expertise allows you to identify key concepts, draw subtle inferences, and create questions that promote deep understanding of the material.
+    You are a world-renowned expert in analytical reasoning, information extraction, and educational content creation. 
+    Your task is to generate a series of insightful questions and provide comprehensive answers based on the given text. 
+    Your expertise allows you to identify key concepts, draw subtle inferences, and create questions that promote deep understanding of the material.
 
     Text for analysis: "{text}"
 
