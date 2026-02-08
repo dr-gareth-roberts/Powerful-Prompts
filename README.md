@@ -1,10 +1,8 @@
 # Powerful Prompts
 
-A curated collection of advanced prompting techniques for AI language models. This repository contains battle-tested prompts for reasoning, problem-solving, content creation, and more.
+![Powerful Prompts banner](assets/powerful-prompts-banner.svg)
 
-## Overview
-
-These prompts leverage cutting-edge prompting techniques including Chain-of-Thought (CoT), Tree-of-Thought, Graph-of-Thought, meta-prompting, and synthetic reasoning to enhance AI model performance across diverse tasks.
+Concise, battle-tested prompts for sharper AI reasoning, writing, estimation, and adaptive systems—ready to copy, adjust, and run in British English.
 
 ## Directory Structure
 
@@ -17,130 +15,31 @@ prompts/
 └── meta-utility/          # Prompt improvement and adaptive systems
 ```
 
-## Prompt Categories
+## Prompt Map
 
-### 🧠 Reasoning & Problem Solving
-**Location:** `prompts/reasoning/`
+**Reasoning (`prompts/reasoning/`)**
+- `cot_prompt.txt`, `reflection_prompt.txt`, `deepdive.txt`, `sophisticated_verbal_problem_solving.txt`
 
-Advanced prompts for structured thinking and complex problem-solving.
+**Estimation (`prompts/estimation/`)**
+- `fermi.txt`
 
-- **`cot_prompt.txt`** - Chain of Thought with Reflection
-  - Implements step-by-step reasoning with built-in error checking
-  - Separates thinking process from final output
-  - Best for: Complex queries requiring careful analysis
+**Writing (`prompts/writing/`)**
+- `summarisation.txt`, `factual-consistency-summarisation.txt`, `editorial_review_prompt.txt`, `generate_expert_qna_prompt.txt`, `generate-verbal-feedback-in-pairwise-ranking.txt`
 
-- **`reflection_prompt.txt`** - Multi-stage Reflection Framework
-  - Structured approach with thinking, reflection, and output phases
-  - Validates reasoning at each step
-  - Best for: High-stakes decisions requiring verification
+**Advanced Techniques (`prompts/advanced-techniques/`)**
+- `graph-of-thought-prompting.txt`, `synthetic_reasoning_prompt.txt`, `mystery_solver.txt`, `abstract-prompt.txt`, `atomic_elements_prompt.txt`, `prompt_chain_of_symbols.txt`
 
-- **`deepdive.txt`** - Deep Dive Problem Analysis
-  - 3-phase approach: analysis, systematic solving, rigorous validation
-  - Includes constraint identification and dimensional analysis
-  - Best for: Mathematical word problems and constraint-based challenges
-
-- **`sophisticated_verbal_problem_solving.txt`** - Advanced Problem Solver
-  - Combines multiple prompting strategies (meta-prompting, ReAct, Tree-of-Thought)
-  - Dynamic approach selection based on problem type
-  - Best for: Open-ended complex problems requiring creative solutions
-
-### 📊 Estimation & Mathematical Reasoning
-**Location:** `prompts/estimation/`
-
-Specialized prompts for quantitative reasoning and approximation.
-
-- **`fermi.txt`** - Comprehensive Fermi Estimation Framework
-  - 15-step process for back-of-the-envelope calculations
-  - Includes multiple validation loops and assumption checking
-  - Contains worked examples from simple to highly complex
-  - Best for: Order-of-magnitude estimations and "guesstimate" problems
-
-### ✍️ Writing & Content Creation
-**Location:** `prompts/writing/`
-
-Prompts for high-quality content generation and evaluation.
-
-- **`summarisation.txt`** - Expert 10-Stage Summarization
-  - Comprehensive process from analysis to meta-reflection
-  - Outputs summary with confidence assessment
-  - Best for: Professional-grade text summarization
-
-- **`factual-consistency-summarisation.txt`** - Factual Consistency Checker
-  - Validates summary accuracy against source material
-  - Best for: Ensuring summarization fidelity
-
-- **`editorial_review_prompt.txt`** - Publication-Quality Review
-  - Comprehensive style guide evaluation
-  - Covers tone, grammar, citations, and inclusive language
-  - Best for: Professional article and content review
-
-- **`generate_expert_qna_prompt.txt`** - Expert Q&A Generation
-  - Creates high-quality question-answer pairs
-  - Best for: Training data generation and knowledge assessment
-
-- **`generate-verbal-feedback-in-pairwise-ranking.txt`** - Response Comparison
-  - Detailed comparative analysis of two responses
-  - Focuses on ranking and evaluation criteria
-  - Best for: Model evaluation and preference learning
-
-### 🚀 Advanced Techniques
-**Location:** `prompts/advanced-techniques/`
-
-Cutting-edge multi-strategy prompting approaches.
-
-- **`graph-of-thought-prompting.txt`** - Graph-based Analysis
-  - 16-step process creating concept graphs with nodes and edges
-  - Identifies clusters, feedback loops, and emergent patterns
-  - Best for: Complex systems analysis and relationship mapping
-
-- **`synthetic_reasoning_prompt.txt`** - Synthetic Prompting
-  - Backward and forward reasoning chain generation
-  - Creates related examples to build understanding
-  - Best for: Learning from examples and analogical reasoning
-
-- **`mystery_solver.txt`** - Detective Investigation Framework
-  - Modular component-based investigation system
-  - Implements Plan-to-Execute and iterative refinement
-  - Best for: Complex multi-step investigations and debugging
-
-- **`abstract-prompt.txt`** - Multi-Faceted Problem Solving
-  - Integrates context, analogies, and counterfactuals
-  - Combines ReAct and Tree-of-Thought frameworks
-  - Best for: Comprehensive analysis requiring multiple perspectives
-
-- **`atomic_elements_prompt.txt`** - Atomic Action Decomposition
-  - Graph-of-Thought backward + recursive Chain-of-Thought forward
-  - Breaks complex goals into atomic actionable steps
-  - Best for: Project planning and task breakdown
-
-- **`prompt_chain_of_symbols.txt`** - Symbolic Reasoning
-  - Uses compact symbolic notation for spatial reasoning
-  - Reduces cognitive load through abstraction
-  - Best for: Geometry, spatial relationships, and logic puzzles
-
-### 🛠️ Meta & Utility
-**Location:** `prompts/meta-utility/`
-
-Tools for prompt optimization and adaptive behavior.
-
-- **`adaptive_dynamic_AI_assistant.txt`** - Adaptive Assistant Framework
-  - Dynamically adopts expert personas
-  - Decomposes tasks and generates context on-the-fly
-  - Best for: Versatile general-purpose assistance
-
-- **`prompt_improver_context_meta_codes.md`** - Meta-code System
-  - Structured task and formatting specification language
-  - Enables concise, precise prompt communication
-  - Best for: Standardizing prompt instructions and workflows
+**Meta & Utility (`prompts/meta-utility/`)**
+- `adaptive_dynamic_AI_assistant.txt`, `prompt_improver_context_meta_codes.md`
 
 ## Quick Start
 
 ### Basic Usage
 
-1. Choose a prompt from the appropriate category
-2. Copy the prompt content
-3. Replace any placeholder variables (typically in `{{DOUBLE_BRACES}}`)
-4. Paste into your AI interface
+1. Pick a prompt from the map above.
+2. Copy the file content.
+3. Swap placeholder variables (usually `{{DOUBLE_BRACES}}`).
+4. Paste into your AI interface or code.
 
 ### Example: Using Chain of Thought
 
@@ -157,46 +56,49 @@ response = model.generate(cot_prompt + "\n\nQuery: " + user_question)
 ### Example: Fermi Estimation
 
 ```
-Replace {{FERMI_QUESTION}} with your estimation problem:
-"How many piano tuners are there in Chicago?"
+Replace {{FERMI_QUESTION}} with your estimation problem, e.g.
+"How many piano tuners are there in Leeds?"
 ```
 
 ## Best Practices
 
 ### Choosing the Right Prompt
 
-1. **For logical reasoning**: Start with `cot_prompt.txt` or `reflection_prompt.txt`
-2. **For calculations**: Use `fermi.txt` or `deepdive.txt`
-3. **For writing tasks**: Explore `prompts/writing/`
-4. **For complex multi-faceted problems**: Try `abstract-prompt.txt` or `graph-of-thought-prompting.txt`
-5. **For adaptive behavior**: Use `adaptive_dynamic_AI_assistant.txt`
+1. Logical reasoning: `cot_prompt.txt` or `reflection_prompt.txt`
+2. Calculations: `fermi.txt` or `deepdive.txt`
+3. Writing: any file in `prompts/writing/`
+4. Complex multi-faceted problems: `abstract-prompt.txt` or `graph-of-thought-prompting.txt`
+5. Adaptive behaviour: `adaptive_dynamic_AI_assistant.txt`
 
-### Optimization Tips
+### Optimisation Tips
 
-- **Combine prompts**: Many prompts can be used together (e.g., CoT + Reflection)
-- **Adjust detail levels**: Scale up/down the number of steps based on problem complexity
-- **Iterate**: Use reflection prompts to refine outputs iteratively
-- **Customize**: Modify prompts to match your specific domain or use case
+- Combine prompts (e.g., CoT + Reflection)
+- Adjust detail level to match complexity
+- Iterate with reflection to refine outputs
+- Customise placeholders to your domain
 
 ## Advanced Usage
 
 ### Chaining Prompts
 
 ```
-1. Use atomic_elements_prompt.txt to break down a complex task
-2. Apply cot_prompt.txt to solve each atomic element
-3. Use reflection_prompt.txt to validate the solution
+1. Break the task with `atomic_elements_prompt.txt`
+2. Solve each element with `cot_prompt.txt`
+3. Validate with `reflection_prompt.txt`
 ```
 
-### Prompt Engineering Techniques Featured
+### Prompting Techniques to Try (beyond those in the files)
 
-- **Chain-of-Thought (CoT)**: Step-by-step reasoning
-- **Tree-of-Thought (ToT)**: Exploring multiple reasoning branches
-- **Graph-of-Thought (GoT)**: Concept relationship mapping
-- **Meta-Prompting**: Self-improving prompts
-- **ReAct**: Reasoning + Acting framework
-- **Synthetic Prompting**: Learning through generated examples
-- **Recursive Decomposition**: Breaking problems into subproblems
+- Self-consistency sampling: draft several reasoning paths and keep the consensus answer.
+- Deliberate planning: outline steps before generating the solution.
+- Socratic questioning: ask clarifying questions before answering.
+- Few-shot scaffolding: show a mini example for each subtask, not just the final output.
+- Program-Aided Logic (PAL): write executable pseudo-code and then explain the result.
+- Retrieval-augmented prompting: fetch context (or craft hypotheticals like HyDE) before reasoning.
+- Constraint-first prompting: declare hard limits, non-goals, and style rules upfront.
+- Persona stacking: rotate through expert roles to stress-test answers.
+- Counterfactual stress tests: ask “what would make this fail?” then patch the answer.
+- Style transfer prompting: match tone/voice from a short reference excerpt.
 
 ## Use Cases
 
@@ -218,24 +120,24 @@ Replace {{FERMI_QUESTION}} with your estimation problem:
 ### Software Development
 - Debugging complex issues
 - System design analysis
-- Code review and optimization
+- Code review and optimisation
 
 ## Contributing
 
 Contributions are welcome! When adding new prompts:
 
-1. Place them in the appropriate category directory
-2. Use descriptive filenames (lowercase with underscores or hyphens)
-3. Include comments explaining placeholder variables
-4. Add examples where helpful
-5. Update this README with a description
+1. Place new prompts in the right category folder.
+2. Use descriptive filenames (lowercase with underscores or hyphens).
+3. Explain placeholder variables.
+4. Add examples where helpful.
+5. Update this README with a short note.
 
 ## File Naming Conventions
 
-- Use lowercase with underscores or hyphens
-- Be descriptive: `chain_of_thought.txt` not `cot.txt`
-- Indicate technique: `*_prompt.txt`, `*_framework.txt`
-- Match content to filename
+- Use lowercase with underscores or hyphens.
+- Be descriptive: `chain_of_thought.txt` not `cot.txt`.
+- Indicate technique: `*_prompt.txt`, `*_framework.txt`.
+- Match content to the filename.
 
 ## License
 
