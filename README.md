@@ -2,7 +2,7 @@
 
 ![Powerful Prompts banner](assets/github-prompting.jpg)
 
-Concise, battle-tested prompts for sharper AI reasoning, writing, estimation, and adaptive systems—ready to copy, adjust, and run in British English.
+Battle-tested prompts for sharper AI reasoning, writing, estimation, and adaptive systems—ready to copy, adjust.
 
 ## Directory Structure
 
